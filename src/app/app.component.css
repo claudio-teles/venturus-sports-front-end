@@ -1,0 +1,64 @@
+header {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.bh {
+    background-color: rgb(186, 235, 225);
+}
+
+h3 {
+    white-space: nowrap;
+}
+
+h3#sport {
+    text-align: left;
+}
+
+h6 {
+    color: rgb(115, 115, 115);
+}
+
+div#img-user {
+    text-align: right;
+}
+
+div#image-puzzle {
+    text-align: right;
+}
+
+div#image-trophy {
+    text-align: right;
+}
+
+div#image-arrows {
+    text-align: right;
+}
+
+div#caixa-pesquisa {
+    text-align: right;
+}
+
+#users {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+  
+  #users td, #users th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+  
+  #users tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #users tr:hover {background-color: #ddd;}
+  
+  #users th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: rgb(255, 255, 255);
+    color: black;
+}

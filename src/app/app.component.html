@@ -1,0 +1,137 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div *ngIf="rota.url === '/'">
+  <div class="p-grid p-justify-between">
+    <div class="p-col"></div>
+    <div class="p-col">
+      <img src="../assets/icons/help.png" alt="imagem-interrogação" height="40px" width="50px" id="interrogacao">
+    </div>
+    <div class="p-col">
+      <h3 id="sport">Venturus Sports</h3>
+    </div>
+
+    <div class="p-col-5"></div>
+
+    <div class="p-col" id="img-user">
+      <img src="../assets/icons/user.png" alt="imagem-padrao-user" height="40px" width="50px">
+    </div>
+    <div class="p-col">
+      <p-megaMenu [model]="items"></p-megaMenu>
+    </div>
+    <div class="p-col"></div>
+  </div>
+</div>
+
+
+<div>
+  <header *ngIf="rota.url === '/'">
+    <menu></menu>
+  </header>
+
+  
+  <div *ngIf="rota.url === '/'">
+    <br>
+    <br>
+  </div>
+
+
+  <div class="bh" *ngIf="rota.url === '/'">
+    <div class="p-grid">
+      <div class="p-col-12">
+        <br><br>
+      </div>
+      <div class="p-col-12">
+        <div class="p-grid">
+          <div class="p-col"></div>
+          <div class="p-col" id="image-puzzle">
+            <img src="../assets/icons/puzzle.png" alt="quebra-cabeca" height="40px" width="50px">
+          </div>
+          <div class="p-col">
+            <h6>Sport Typy</h6>
+            <h3>Cycling</h3>
+          </div>
+          <div class="p-col" id="image-trophy">
+            <img src="../assets/icons/trophy.png" alt="trofeu" height="40px" width="50px">
+          </div>
+          <div class="p-col">
+            <h6>Mode</h6>
+            <h3>Advanced</h3>
+          </div>
+          <div class="p-col" id="image-arrows">
+            <img src="../assets/icons/baseline_compare_arrows_black_18dp.png" alt="setas" height="40px" width="50px">
+          </div>
+          <div class="p-col">
+            <h6>Route</h6>
+            <h3>30 miles</h3>
+          </div>
+          <div class="p-col-5"></div>
+        </div>
+      </div>
+      <div class="p-col-12">
+        <br>
+      </div>
+    </div>
+  </div>
+
+
+  <div *ngIf="rota.url === '/'">
+    <br><br>
+  </div>
+
+
+  <div class="ui-g" id="barra-usuario" *ngIf="rota.url === '/'">
+    <div class="ui-g-1"></div>
+    <div class="ui-g-1">
+      <h1>Users</h1>
+    </div>
+    <div class="ui-g-1"></div>
+    <div class="ui-g-4">
+      
+  </div>
+     <div class="ui-g-1"></div>
+    <div class="ui-g-3" id="caixa-pesquisa">
+      <p-autoComplete class="pi pi-search" [(ngModel)]="opcao" [suggestions]="opcoesFiltradas" (completeMethod)="filtrarOpcoes($event)" [size]="30"
+        placeholder="Pesquisar" [minLength]="1" [dropdown]="true"></p-autoComplete>
+      <span style="margin-left:10px">Pesquisa: {{opcao}}</span>
+    </div>
+    <div class="ui-g-1"></div>
+  </div>
+
+  <div class="lista-de-usuarios" *ngIf="rota.url === '/'">
+    <div class="p-grid">
+      <div class="p-col"></div>
+      <div class="p-col-10">
+        <table id="users">
+          <tr>
+            <th>User Name</th>
+            <th>Name</th>
+            <th>E-mail</th>
+            <th>City</th>
+            <th>Ride in Group</th>
+            <th>Day of week</th>
+            <th>Posts</th>
+            <th>Albums</th>
+            <th>Photos</th>
+          </tr>
+          <tr *ngFor="let user of users; let i=index">
+            <td>{{ user.username }}</td>
+            <td><p>{{ user.name }}</p></td>
+            <td><p [ngStyle]="{'color': '#00d5ca'}">{{ user.email }}</p></td>
+            <td><p [ngStyle]="{'color': '#00d5ca'}">{{ user.address.city }}</p></td>
+            <td><p>Always</p></td>
+            <td><p>Sum, Mon, Tue</p></td>
+            <td><p>1</p></td>
+            <td><p>1</p></td>
+            <td><p>1</p></td>
+          </tr>
+        </table>
+      </div>
+      <div class="p-col"></div>
+    </div>
+  </div>
+
+  <div *ngIf="rota.url === '/'">
+    <br><br>
+  </div>
+</div>
+
+<router-outlet></router-outlet>

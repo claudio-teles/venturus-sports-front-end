@@ -1,0 +1,91 @@
+<div style="text-align:left" id="cabecalho">
+  <h1>Registration</h1>
+</div>
+<br>
+<div>
+  <header >
+    <div class="p-grid" id="r-3">
+      <div class="p-col">Need help?</div>
+      <div class="p-col">Why register?</div>
+      <div class="p-col">What people are saying...</div>
+    </div>
+    
+    <div class="p-grid">
+      <div class="p-col" id="boia">
+          <img src="../../../assets/icons/life-ring.png" alt="icone-boia" height="40px" width="50px">
+      </div>
+      <div class="p-col-3">
+          Lorem ipsum dolor sit amet, consectetur
+          adipisicing elit, sed do eiusmod tempor
+          incididunt ut labore et dolore magna aliqua.
+      </div>
+      <div class="p-col">
+        <img src="../../../assets/icons/heartbeat.png" alt="icone-coracao" height="40px" width="50px">
+      </div>
+      <div class="p-col-3">
+          Lorem ipsum dolor sit amet, consectetur
+          adipisicing elit, sed do eiusmod tempor
+          incididunt ut labore et dolore magna aliqua.
+      </div>
+
+      <div class="p-col">
+        <img src="../../../assets/icons/smile.png" alt="icone-sorriso" height="40px" width="50px">
+      </div>
+      <div class="p-col-3">
+          Lorem ipsum dolor sit amet, consectetur
+          adipisicing elit, sed do eiusmod tempor
+          incididunt ut labore et dolore magna aliqua.
+      </div>
+    </div>
+  </header>
+  <br>
+  <div class="p-grid">
+    <div class="p-col-2"></div>
+    <div class="p-col-8">
+      __________________________________________________________________________________________________________________________________________
+      <div class="p-grid">
+        <div class="p-col-5">
+          Username
+          <br>
+          <input type="text" pInputText [(ngModel)]="users[0].userName" size="50"/>
+          <h6>Instructions to show on input focus.</h6>
+          Name
+          <br>
+          <input type="text" pInputText [(ngModel)]="users[0].name" size="50"/>
+          <br><br>
+          E-mail
+          <br>
+          <input type="text" pInputText [(ngModel)]="users[0].email" size="50"/>
+          <br><br>
+          <button type="button" class="btn btn-success">Save</button>&nbsp;
+          <button type="button" class="btn btn-light">Discard</button>
+
+        </div>
+        <div class="p-col"></div>
+        <div class="p-col-6">
+          City
+          <br>
+          <input type="text" pInputText [(ngModel)]="users[0].city" size="50"/>
+          <br><br>
+          Ridi in group?
+          <br>
+          <p-radioButton name="group2" value="Aways" label="Aways" [(ngModel)]="val1" inputId="preopt1"></p-radioButton>&nbsp;
+          <p-radioButton name="group2" value="Sometimes" label="Sometimes" [(ngModel)]="val1" inputId="preopt2"></p-radioButton>&nbsp;
+          <p-radioButton name="group2" value="Never" label="Never" [(ngModel)]="val1" inputId="preopt3"></p-radioButton>&nbsp;
+          <br><br>
+          <p-triStateCheckbox [(ngModel)]="sum" label="Sum" tabindex=1 id="sum"></p-triStateCheckbox>&nbsp;
+          <p-triStateCheckbox [(ngModel)]="mon" label="Mon" tabindex=2 id="mon"></p-triStateCheckbox>&nbsp;
+          <p-triStateCheckbox [(ngModel)]="tue" label="Tue" tabindex=3 id="tue"></p-triStateCheckbox>&nbsp;
+          <p-triStateCheckbox [(ngModel)]="wed" label="Wed" tabindex=4 id="wed"></p-triStateCheckbox>&nbsp;
+          <p-triStateCheckbox [(ngModel)]="thu" label="Thu" tabindex=5 id="thu"></p-triStateCheckbox>&nbsp;
+          <p-triStateCheckbox [(ngModel)]="fri" label="Fri" tabindex=6 id="fri"></p-triStateCheckbox>&nbsp;
+          <p-triStateCheckbox [(ngModel)]="sat" label="Sat" tabindex=7 id="sat"></p-triStateCheckbox>&nbsp;
+          <br>
+          Sum {{ sum }}
+        </div>
+        <div class="p-col"></div>
+      </div>
+    </div>
+    <div class="p-col-2"></div>
+  </div>
+</div>

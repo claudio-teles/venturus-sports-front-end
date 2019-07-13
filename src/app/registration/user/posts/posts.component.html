@@ -1,0 +1,19 @@
+<h1 [ngStyle]="{'text-align': 'center', 'color': 'green'}">
+  Venturus
+</h1>
+<br><br>
+
+<div class="list-group">
+  <a class="list-group-item list-group-item-action active">
+    Lista de postagens
+  </a>
+  <div *ngFor="let post of posts">
+    <a class="list-group-item list-group-item-action tabindex=">
+      UserId: {{ post.userId }} <br>
+      Id: {{ post.id }} <br>
+      Title: {{ post.title }} <br>
+      Body: {{ post.body }} <br>
+    </a>
+  </div>
+</div>
+
